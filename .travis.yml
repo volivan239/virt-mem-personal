@@ -4,7 +4,7 @@ before_install:
 
 before_script:
   - ./gradlew wrapper --gradle-version=6.7 --distribution-type=bin
-  - gradle jar
+  - ./gradlew jar
 
 script:
   - ./test.sh 

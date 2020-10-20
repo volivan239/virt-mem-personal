@@ -1,7 +1,5 @@
 #!/bin/bash
 
-gradle jar
-
 TEST_COUNT=10
 result=0
 for ((i = 1 ; i <= $TEST_COUNT ; i++)); do
