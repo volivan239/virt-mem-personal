@@ -1,0 +1,8 @@
+language: java
+
+before_script:
+  - gradle jar
+
+script:
+  - ./test.sh 
+
