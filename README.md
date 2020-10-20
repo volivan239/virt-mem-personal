@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/volivan239/virt-mem-personal.svg?branch=main)](https://travis-ci.com/volivan239/virt-mem-personal)
+
 # Проект «Алгоритмы управления виртуальной памятью»
 
 ## Описание предметной области
