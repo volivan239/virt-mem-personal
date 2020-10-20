@@ -1,0 +1,46 @@
+Case #1: maxPage = 1, memorySize = 5, 7 queries
+
+Output of algo OPT: (1 bad Queries out of 7)
+1 0 0 0 0 0 0 
+Output of algo FIFO: (1 bad Queries out of 7)
+1 0 0 0 0 0 0 
+Output of algo LRU: (1 bad Queries out of 7)
+1 0 0 0 0 0 0 
+
+Case #2: maxPage = 2, memorySize = 5, 5 queries
+
+Output of algo OPT: (2 bad Queries out of 5)
+1 2 0 0 0 
+Output of algo FIFO: (2 bad Queries out of 5)
+1 2 0 0 0 
+Output of algo LRU: (2 bad Queries out of 5)
+1 2 0 0 0 
+
+Case #3: maxPage = 1, memorySize = 10, 10 queries
+
+Output of algo OPT: (1 bad Queries out of 10)
+1 0 0 0 0 0 0 0 0 0 
+Output of algo FIFO: (1 bad Queries out of 10)
+1 0 0 0 0 0 0 0 0 0 
+Output of algo LRU: (1 bad Queries out of 10)
+1 0 0 0 0 0 0 0 0 0 
+
+Case #4: maxPage = 1, memorySize = 10, 10 queries
+
+Output of algo OPT: (1 bad Queries out of 10)
+1 0 0 0 0 0 0 0 0 0 
+Output of algo FIFO: (1 bad Queries out of 10)
+1 0 0 0 0 0 0 0 0 0 
+Output of algo LRU: (1 bad Queries out of 10)
+1 0 0 0 0 0 0 0 0 0 
+
+Case #5: maxPage = 100000, memorySize = 100000, 3 queries
+
+Output of algo OPT: (3 bad Queries out of 3)
+1 1 1 
+Output of algo FIFO: (3 bad Queries out of 3)
+1 2 3 
+Output of algo LRU: (3 bad Queries out of 3)
+1 2 3 
+
+Case #6 was skipped due to being invalid
