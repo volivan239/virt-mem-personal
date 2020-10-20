@@ -1,0 +1,18 @@
+To see all the information about algorithms' output, see .out files
+
+
+From file testData/test003.txt:
+Case #1: ЗАПУСКАЕМ is not a correct testcase: skipping
+Case #2: ▄███▀░◐░░░▌░░░░░░░ is not a correct testcase: skipping
+Case #3: ░░░░▐░░░░░▐░░░░░░░ is not a correct testcase: skipping
+Case #4: ░░░░▌░░░░▄▀▒▒▀▀▀▀▄ is not a correct testcase: skipping
+Case #5: ░░░▐░░░░▐▄▒▒▒▒▒▒▒▒▒▒▀▄ is not a correct testcase: skipping
+Case #6: ░░░░░░▀▄▄▄▄▄█▄▄▄▄▄▄▄▄▄▄▄▀▄ is not a correct testcase: skipping
+Case #7: ░░░░░░░░░░░▌▌░▌▌░░░░░ is not a correct testcase: skipping
+Case #1 was skipped due to being invalid
+Case #2 was skipped due to being invalid
+Case #3 was skipped due to being invalid
+Case #4 was skipped due to being invalid
+Case #5 was skipped due to being invalid
+Case #6 was skipped due to being invalid
+Case #7 was skipped due to being invalid

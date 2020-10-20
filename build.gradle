@@ -5,7 +5,6 @@ plugins {
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
 mainClassName = "VirtualMemoryKt"
 
 sourceSets {
@@ -69,15 +68,22 @@ test{
     }
 }
 
-task intTest(type: Test){
-    testLogging {
-        events "passed", "skipped", "failed"
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
     }
-    testClassesDirs = sourceSets.intTest.output.classesDirs
-    classpath = sourceSets.intTest.runtimeClasspath
-    useJUnitPlatform()
+
+    from sourceSets.main.output
+
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+}
+
+task intTest(type: Exec) {
+    commandLine './test.sh'
 }
 
 
 check.dependsOn intTest
-intTest.mustRunAfter test

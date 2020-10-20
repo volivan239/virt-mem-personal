@@ -1,0 +1,56 @@
+To see all the information about algorithms' output, see .out files
+
+
+From file testData/test008.txt:
+Case #6: 1 queries were declared, but 4 where provided, skipping
+
+Case #1: maxPage = 1, memorySize = 5, 7 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 1          | 85%        | 100%      |
+| FIFO    | 1          | 85%        | 100%      |
+| LRU     | 1          | 85%        | 100%      |
++---------+------------+------------+-----------+
+
+Case #2: maxPage = 2, memorySize = 5, 5 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 2          | 60%        | 100%      |
+| FIFO    | 2          | 60%        | 100%      |
+| LRU     | 2          | 60%        | 100%      |
++---------+------------+------------+-----------+
+
+Case #3: maxPage = 1, memorySize = 10, 10 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 1          | 90%        | 100%      |
+| FIFO    | 1          | 90%        | 100%      |
+| LRU     | 1          | 90%        | 100%      |
++---------+------------+------------+-----------+
+
+Case #4: maxPage = 1, memorySize = 10, 10 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 1          | 90%        | 100%      |
+| FIFO    | 1          | 90%        | 100%      |
+| LRU     | 1          | 90%        | 100%      |
++---------+------------+------------+-----------+
+
+Case #5: maxPage = 100000, memorySize = 100000, 3 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 3          | 0%         | 0%        |
+| FIFO    | 3          | 0%         | 0%        |
+| LRU     | 3          | 0%         | 0%        |
++---------+------------+------------+-----------+
+Case #6 was skipped due to being invalid

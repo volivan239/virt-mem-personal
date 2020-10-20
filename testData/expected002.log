@@ -1,0 +1,20 @@
+To see all the information about algorithms' output, see .out files
+
+
+From file testData/test002.txt:
+Case #1: 1 -1 1 is not a correct testcase: skipping
+Case #2: -1 -1 -1 is not a correct testcase: skipping
+Case #3: Some queries are out of specified range, skipping
+Case #4: Some queries are out of specified range, skipping
+Case #5: 10 queries were declared, but 1 where provided, skipping
+Case #6: was not specified correct sequence: skipping
+Case #7: abacaba is not a correct testcase: skipping
+Case #8: 1 queries were declared, but 2 where provided, skipping
+Case #1 was skipped due to being invalid
+Case #2 was skipped due to being invalid
+Case #3 was skipped due to being invalid
+Case #4 was skipped due to being invalid
+Case #5 was skipped due to being invalid
+Case #6 was skipped due to being invalid
+Case #7 was skipped due to being invalid
+Case #8 was skipped due to being invalid

@@ -1,0 +1,24 @@
+To see all the information about algorithms' output, see .out files
+
+
+From file testData/test010.txt:
+
+Case #1: maxPage = 6220, memorySize = 1050, 5273 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 3560       | 32%        | 100%      |
+| FIFO    | 4449       | 15%        | 48%       |
+| LRU     | 4464       | 15%        | 47%       |
++---------+------------+------------+-----------+
+
+Case #2: maxPage = 5257, memorySize = 290, 12413 queries
+
++---------+------------+------------+-----------+
+| Algo    | Bad Queries| Rel.Score  | Norm.Score|
++---------+------------+------------+-----------+
+| OPT     | 8875       | 28%        | 100%      |
+| FIFO    | 11770      | 5%         | 18%       |
+| LRU     | 11770      | 5%         | 18%       |
++---------+------------+------------+-----------+
