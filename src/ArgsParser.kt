@@ -6,31 +6,8 @@
 
 import java.io.File
 
-// Changes outputPrefix value in settings
-fun applyOutputPrefix(arg: String, settings: Settings) {
-    val value = arg.substringAfter("=")
-    if (!File(value).isDirectory) {
-        println("Skipping argument $arg: $value is not a directory")
-        return
-    }
-    settings.outputPrefix = value
-    if (!settings.outputPrefix.endsWith("/"))
-        settings.outputPrefix += "/"
-}
-
-// Applies any additional param
-fun applyArg(arg: String, settings: Settings) {
-    if (arg.startsWith("-output-prefix="))
-        return applyOutputPrefix(arg, settings)
-    if (arg.startsWith("--show-chart")) {
-        settings.showChart = true
-        return
-    }
-    println("Unknown argument: $arg")
-}
-
 // Returns files that were passed as arguments
-fun getFiles(fileNames: List<String>): List<File> {
+fun getFiles(fileNames: Array<String>): List<File> {
     var files = mutableListOf<File>()
     for (fileName in fileNames) {
         if (!File(fileName).exists()) {
@@ -45,7 +22,6 @@ fun getFiles(fileNames: List<String>): List<File> {
 }
 
 // Applies all given arguments
-fun applyArgs(args: Array<String>, settings: Settings): List<File> {
-    args.filter { it.startsWith("-") }.forEach { applyArg(it, settings) }
-    return getFiles(args.filter { !it.startsWith("-") }).filter { it.extension != "out" }
+fun applyArgs(args: Array<String>): List<File> {
+    return getFiles(args).filter { it.extension != "out" }
 }

@@ -1,9 +1,12 @@
 package algo
 
+import AlgoResult
+
 // Class is used to represent replacement algorithm with main function `get`
 open class Algo(var maxPage: Int, var memorySize: Int, open var name: String) {
     open var memory = MutableList(memorySize + 1) { 0 }
     open var positionInMemory = MutableList(maxPage + 1) { -1 }
+    open var result = AlgoResult()
 
     // Sets pageNumber in memory and returns cellNumber
     open fun set(cellNumber: Int, pageNumber: Int): Int {

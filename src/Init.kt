@@ -11,8 +11,9 @@ fun gaussRandom(): Double {
 }
 
 // Returns numOfQueries integers in range 1..maxPage using rnd() function (rnd() should return [0..1) value)
-fun genRandom(maxPage: Int, numOfQueries: Int, rnd: ()->Double): List<Int> {
-    return (1..numOfQueries).map {(rnd() * maxPage).toInt() + 1}
+fun genRandom(maxPage: Int): Int {
+    return (gaussRandom() * maxPage).toInt() + 1
+    //return (1..numOfQueries).map {(rnd() * maxPage).toInt() + 1}
 }
 
 // Returns list of all available algorithms initialized with correct maxPage and memorySize

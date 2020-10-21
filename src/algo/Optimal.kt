@@ -9,6 +9,7 @@ class Optimal(maxPage: Int, memorySize: Int, name: String = "OPT") : Algo(maxPag
     // initQueries should be called once before any get() to let algorithm know the queries
     fun initQueries(queries: List<Int>) {
         this.queries = queries
+        nxt.forEach { it.clear() }
         for (i in queries.indices)
             nxt[queries[i]].add(i)
         for (i in 0..maxPage)
