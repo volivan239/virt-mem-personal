@@ -10,12 +10,6 @@ fun gaussRandom(): Double {
     return (x + 2) / 4
 }
 
-// Returns numOfQueries integers in range 1..maxPage using rnd() function (rnd() should return [0..1) value)
-fun genRandom(maxPage: Int): Int {
-    return (gaussRandom() * maxPage).toInt() + 1
-    //return (1..numOfQueries).map {(rnd() * maxPage).toInt() + 1}
-}
-
 // Returns list of all available algorithms initialized with correct maxPage and memorySize
 fun getAlgorithms(maxPage: Int, memorySize: Int): List<algo.Algo> {
     return listOf(algo.Optimal(maxPage, memorySize), algo.Fifo(maxPage, memorySize), algo.Lru(maxPage, memorySize))

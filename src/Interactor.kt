@@ -4,17 +4,20 @@
 
 import algo.Algo
 import algo.Optimal
+import java.util.*
 import kotlin.math.min
 
-fun run(algorithms: List<Algo>, case: Case) {
-    for (i in 0 until case.numOfQueries step case.generationDepth) {
-        val length = min(case.generationDepth, case.numOfQueries - i)
-        val queries = (1..length).map { genRandom(case.maxPage) }
-        algorithms.forEach { if (it is Optimal) it.initQueries(queries.toList()) }
-        println("+------+------+----------+----------+----------+")
-        for (num in queries.indices) {
-            algorithms.forEach { it.result.add(it.get(queries[num])) }
-            printResults(i + num + 1, queries[num], algorithms)
+fun run(algorithms: List<Algo>, case: Case, rnd: () -> Double) {
+    val queries: Queue<Int> = LinkedList()
+    for (i in 0 until case.numOfQueries) {
+        while (queries.size < case.generationDepth) {
+            val query = (rnd() * case.maxPage).toInt() + 1
+            algorithms.forEach { if (it is Optimal) it.addQuery(query) }
+            queries.add(query)
         }
+        val query = queries.peek()
+        queries.remove()
+        algorithms.forEach { it.result.add(it.get(query)) }
+        printResults(i + 1, query, algorithms)
     }
 }

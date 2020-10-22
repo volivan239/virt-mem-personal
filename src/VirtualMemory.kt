@@ -31,7 +31,8 @@ fun processCase(case: Case?, caseNumber: Int) {
     println("Case #${caseNumber}:")
     println(raw)
     println("|No.   |Query | OPT      | FIFO     | LRU      |")
-    run(algorithms, case)
+    println(raw)
+    run(algorithms, case) { gaussRandom() }
     println(raw)
     println()
 }
